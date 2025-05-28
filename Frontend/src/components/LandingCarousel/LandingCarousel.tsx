@@ -266,7 +266,7 @@ export default function LandingCarousel({ setCurrentSlide, arrayOfYears }: Landi
                 If you enjoyed exploring this project, feel free to <strong>visit the GitHub repository</strong> to
                 check out the full code implementation.
               </p>
-              <Link href="https://github.com/your-github-repo" target="_blank">
+              <Link href="https://github.com/FabriDipolito/Poc-CarCrashes" target="_blank">
                 <Button variant="default" size="lg" className='cursor-pointer'>
                   Visit GitHub Repository
                 </Button>
