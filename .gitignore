@@ -1,0 +1,19 @@
+# Ignorar node_modules en todos los paquetes
+**/node_modules/
+
+# Ignorar .next de cualquier frontend
+**/.next/
+
+# Ignorar outputs de compilación comunes
+**/dist/
+**/build/
+**/out/
+
+# Archivos temporales comunes
+*.log
+*.tsbuildinfo
+*.pem
+.DS_Store
+
+# Ignorar .envs
+**/.env*
