@@ -17,8 +17,8 @@ const PieChartComponent: React.FC<PieChartComponentProps> = ({
   filterType,
   setFilterType,
 }) => {
-  const [startYear, setStartYear] = useState<number>(2018);
-  const [endYear, setEndYear] = useState<number>(2022);
+  const [startYear, setStartYear] = useState<number>(arrayOfYears[0]);
+  const [endYear, setEndYear] = useState<number>(arrayOfYears[arrayOfYears.length - 1]);
   const [pieGraphData, setPieGraphData] = useState<PieChartDataItem[]>([]);
   const [pieGraphDataTotal, setPieGraphDataTotal] = useState<number>(0);
   const { showLoader, hideLoader } = useLoadingTruck();

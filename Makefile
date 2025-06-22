@@ -69,12 +69,10 @@ fe-prod-run:
 # RUN EVERYTHING IN PROD
 ########################
 
-prod-run-all: api-install etl-install fe-install api-build etl-build fe-build
+prod-run-all: api-install fe-install api-build fe-build
 	@echo "🚀 Starting all services in production mode..."
 	@echo "🔵 1. Running API (port 8080)"
 	cd API/target && DB_PATH=jdbc:sqlite:file:../../data.db SPRING_PROFILES_ACTIVE=prod java -jar $$(ls *.jar | grep -v 'original' | head -n 1) &
-	@echo "🟡 2. Running ETL (port 8081)"
-	cd ETL/target && DB_PATH=jdbc:sqlite:file:../../data.db SPRING_PROFILES_ACTIVE=prod java -jar $$(ls *.jar | grep -v 'original' | head -n 1) --server.port=8081 &
 	@echo "🟢 3. Running Frontend (port 3000)"
 	cd Frontend && npm start
 

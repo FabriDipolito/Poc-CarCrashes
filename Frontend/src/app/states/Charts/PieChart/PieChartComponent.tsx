@@ -5,8 +5,8 @@ import { getStatesPieChart } from '@/lib/api/states';
 import { useLoadingTruck } from '@/hooks/useLoadingTruck';
 
 const PieChartComponent: React.FC<PieChartComponentProps> = ({ arrayOfYears }) => {
-  const [startYear, setStartYear] = useState<number>(2018);
-  const [endYear, setEndYear] = useState<number>(2022);
+  const [startYear, setStartYear] = useState<number>(arrayOfYears[0]);
+  const [endYear, setEndYear] = useState<number>(arrayOfYears[arrayOfYears.length - 1]);
   const [filterType, setFilterType] = useState('dangerous');
   const [pieGraphData, setPieGraphData] = useState<PieChartDataItem[]>([]);
   const [pieGraphDataTotal, setPieGraphDataTotal] = useState<number>(0);

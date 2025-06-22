@@ -43,7 +43,7 @@ public class EtlService {
     public void runEtl() {
         System.out.println("Starting ETL Process...");
 
-        int[] years = {2022};
+        int[] years = {2023};
         int[] states = new int[56];
 
         // Fill the array with the 52 states (4 ids are not used) (1 a 56)
@@ -54,7 +54,7 @@ public class EtlService {
         for (int year : years) {
             for (int state : states) {
                 // Avoid these ids, because they don't represent a state
-                if (state == 3 || state == 7 || state == 14 || state == 52 || state == 1 || state == 2 || state == 4 || state == 5 || state == 6 || state == 8 || state == 9 || state == 10 || state == 11 || state == 12 || state == 13 || state == 15 || state == 16 || state == 17 || state == 18 || state == 19 || state == 20 || state == 21 || state == 22 || state == 23 || state == 24 || state == 25 || state == 26 || state == 27 || state == 28 || state == 29 || state == 30 || state == 31 || state == 32 || state == 33 || state == 34 || state == 35 || state == 36 || state == 37 || state == 38 || state == 39 || state == 40) continue;
+                if (state == 3 || state == 7 || state == 14 || state == 52) continue;
 
                 try {
                     System.out.println("Processing state: " + state + ", year: " + year);
